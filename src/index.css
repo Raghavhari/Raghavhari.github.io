@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Black & white base — xAI inspired */
+    --background: 0 0% 0%;
+    /* pure black */
+    --background-elevated: 0 0% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    /* white as primary */
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 9%;
+    --muted-foreground: 0 0% 58%;
+
+    --accent: 0 0% 85%;
+    --accent-foreground: 0 0% 0%;
+
+    /* ── Accent color tokens (used sparingly for pop) ─────────── */
+    /* Electric blue */
+    --blue: 217 91% 60%;
+
+    /* Violet */
+    --violet: 262 83% 68%;
+
+    /* Cyan */
+    --cyan: 189 94% 55%;
+
+    /* Emerald — for live/success indicators */
+    --success: 158 64% 52%;
+
+    /* Amber — for "in progress" or badges */
+    --amber: 38 92% 60%;
+
+    --border: 0 0% 13%;
+    --ring: 217 91% 60%;
+    /* blue ring on focus */
+
+    --radius: 0.85rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 65%), hsl(262 83% 68%));
+    --gradient-soft: linear-gradient(135deg, hsl(217 91% 60% / 0.12), hsl(262 83% 68% / 0.06));
+    --gradient-radial: radial-gradient(ellipse at top, hsl(217 91% 60% / 0.10), transparent 60%);
+    --gradient-text: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 58%));
+
+    /* Shadows / glows */
+    --glow-primary: 0 0 40px hsl(217 91% 60% / 0.25);
+    --shadow-elegant: 0 20px 60px -20px hsl(217 91% 60% / 0.20);
+
+    /* Glass */
+    --glass-bg: hsl(0 0% 6% / 0.65);
+    --glass-border: hsl(0 0% 100% / 0.07);
+
+    --transition-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  /* Force dark always */
+  html {
+    color-scheme: dark;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "cv11";
+    background-image:
+      linear-gradient(hsl(0 0% 100% / 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(0 0% 100% / 0.035) 1px, transparent 1px),
+      radial-gradient(ellipse 80% 50% at 50% -10%, hsl(0 0% 100% / 0.06), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 90% 10%, hsl(0 0% 100% / 0.04), transparent 60%);
+    background-size: 48px 48px, 48px 48px, auto, auto;
+    background-position: -1px -1px, -1px -1px, center, center;
+    background-attachment: fixed;
+    -ms-overflow-style: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Subtle vignette + scanline shimmer for xAI feel */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 70% 60% at 50% 50%, transparent 40%, hsl(0 0% 0% / 0.55) 100%);
+  }
+
+  ::selection {
+    background: hsl(0 0% 100% / 0.2);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+  }
+
+  .text-gradient {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(hsl(217 91% 60% / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(217 91% 60% / 0.03) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 60% 60% at 50% 40%, black, transparent 80%);
+  }
+
+  /* ── Live status dot glow ─────────────────────────────────── */
+  .dot-live {
+    box-shadow: 0 0 8px hsl(158 64% 52% / 0.70);
+  }
+
+  /* ── Signature drop-shadow (Hero) ────────────────────────── */
+  .signature-glow {
+    filter: drop-shadow(0 0 24px hsl(217 91% 60% / 0.20));
+  }
+
+  /* ── Animation fill-mode helper (Blogs / OSS stagger) ──────── */
+  .anim-both {
+    animation-fill-mode: both;
+  }
+
+  /* ── Technologies schematic spine ─────────────────────────── */
+  @keyframes schematic-dash {
+    to {
+      stroke-dashoffset: -32;
+    }
+  }
+
+  .schematic-spine {
+    stroke-dasharray: 6 10;
+    animation: schematic-dash 14s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .schematic-spine {
+      animation: none;
+    }
+  }
+
+  /* ── Page loader (boot screen) ─────────────────────────────── */
+  @keyframes loader-line-reveal {
+    from {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes loader-bar-fill {
+    from {
+      transform: scaleX(0);
+    }
+
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes loader-scan-sweep {
+    0% {
+      transform: translateY(-120%);
+      opacity: 0;
+    }
+
+    18% {
+      opacity: 0.12;
+    }
+
+    100% {
+      transform: translateY(120%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes loader-ring {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .loader-line {
+    opacity: 0;
+    animation: loader-line-reveal 0.55s var(--transition-smooth) forwards;
+  }
+
+  .loader-bar-track {
+    transform-origin: left center;
+    animation: loader-bar-fill 1.35s var(--transition-smooth) forwards;
+  }
+
+  .loader-scan-sweep {
+    animation: loader-scan-sweep 2.4s ease-in-out infinite;
+  }
+
+  .loader-ring-slow {
+    animation: loader-ring 10s linear infinite;
+  }
+
+  .loader-ring-slow-reverse {
+    animation: loader-ring 14s linear infinite reverse;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .loader-line {
+      opacity: 1;
+      animation: none;
+      transform: none;
+    }
+
+    .loader-bar-track {
+      animation: none;
+      transform: scaleX(1);
+    }
+
+    .loader-scan-sweep {
+      animation: none;
+      opacity: 0;
+    }
+
+    .loader-ring-slow,
+    .loader-ring-slow-reverse {
+      animation: none;
+    }
+  }
+}
