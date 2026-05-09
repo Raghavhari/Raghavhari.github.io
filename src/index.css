@@ -4,9 +4,7 @@
 
 @layer base {
   :root {
-    /* Black & white base — xAI inspired */
     --background: 0 0% 0%;
-    /* pure black */
     --background-elevated: 0 0% 6%;
     --foreground: 0 0% 98%;
 
@@ -14,7 +12,6 @@
     --card-foreground: 0 0% 98%;
 
     --primary: 0 0% 98%;
-    /* white as primary */
     --primary-foreground: 0 0% 0%;
 
     --secondary: 0 0% 10%;
@@ -26,46 +23,35 @@
     --accent: 0 0% 85%;
     --accent-foreground: 0 0% 0%;
 
-    /* ── Accent color tokens (used sparingly for pop) ─────────── */
-    /* Electric blue */
     --blue: 217 91% 60%;
 
-    /* Violet */
     --violet: 262 83% 68%;
 
-    /* Cyan */
     --cyan: 189 94% 55%;
 
-    /* Emerald — for live/success indicators */
     --success: 158 64% 52%;
 
-    /* Amber — for "in progress" or badges */
     --amber: 38 92% 60%;
 
     --border: 0 0% 13%;
     --ring: 217 91% 60%;
-    /* blue ring on focus */
 
     --radius: 0.85rem;
 
-    /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(217 91% 65%), hsl(262 83% 68%));
     --gradient-soft: linear-gradient(135deg, hsl(217 91% 60% / 0.12), hsl(262 83% 68% / 0.06));
     --gradient-radial: radial-gradient(ellipse at top, hsl(217 91% 60% / 0.10), transparent 60%);
     --gradient-text: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 58%));
 
-    /* Shadows / glows */
     --glow-primary: 0 0 40px hsl(217 91% 60% / 0.25);
     --shadow-elegant: 0 20px 60px -20px hsl(217 91% 60% / 0.20);
 
-    /* Glass */
     --glass-bg: hsl(0 0% 6% / 0.65);
     --glass-border: hsl(0 0% 100% / 0.07);
 
     --transition-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
-  /* Force dark always */
   html {
     color-scheme: dark;
   }
@@ -103,7 +89,6 @@
     display: none;
   }
 
-  /* Subtle vignette + scanline shimmer for xAI feel */
   body::before {
     content: "";
     position: fixed;
@@ -150,22 +135,32 @@
     mask-image: radial-gradient(ellipse 60% 60% at 50% 40%, black, transparent 80%);
   }
 
-  /* ── Live status dot glow ─────────────────────────────────── */
   .dot-live {
     box-shadow: 0 0 8px hsl(158 64% 52% / 0.70);
   }
 
-  /* ── Signature drop-shadow (Hero) ────────────────────────── */
   .signature-glow {
     filter: drop-shadow(0 0 24px hsl(217 91% 60% / 0.20));
   }
 
-  /* ── Animation fill-mode helper (Blogs / OSS stagger) ──────── */
   .anim-both {
     animation-fill-mode: both;
   }
 
-  /* ── Technologies schematic spine ─────────────────────────── */
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
   @keyframes schematic-dash {
     to {
       stroke-dashoffset: -32;
@@ -183,7 +178,96 @@
     }
   }
 
-  /* ── Page loader (boot screen) ─────────────────────────────── */
+  @keyframes about-ring-cw {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes about-ring-ccw {
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+
+  @keyframes about-beacon {
+    0%,
+    100% {
+      opacity: 0.4;
+      transform: scale(1);
+    }
+
+    50% {
+      opacity: 0.95;
+      transform: scale(1.06);
+    }
+  }
+
+  @keyframes about-scan-vertical {
+    0% {
+      transform: translateY(-108%);
+      opacity: 0;
+    }
+
+    12% {
+      opacity: 0.14;
+    }
+
+    100% {
+      transform: translateY(108%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes achievement-grid-drift {
+    0% {
+      transform: translate(0, 0);
+    }
+
+    100% {
+      transform: translate(-56px, -56px);
+    }
+  }
+
+  .about-ring-cw {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: about-ring-cw 52s linear infinite;
+  }
+
+  .about-ring-ccw {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: about-ring-ccw 36s linear infinite;
+  }
+
+  .about-beacon {
+    animation: about-beacon 4.5s ease-in-out infinite;
+  }
+
+  .about-scan-vertical {
+    animation: about-scan-vertical 5.5s ease-in-out infinite;
+  }
+
+  .achievement-grid-drift {
+    animation: achievement-grid-drift 22s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .about-ring-cw,
+    .about-ring-ccw,
+    .about-beacon,
+    .about-scan-vertical,
+    .achievement-grid-drift {
+      animation: none;
+    }
+
+    .about-beacon {
+      opacity: 0.65;
+      transform: none;
+    }
+  }
+
   @keyframes loader-line-reveal {
     from {
       opacity: 0;

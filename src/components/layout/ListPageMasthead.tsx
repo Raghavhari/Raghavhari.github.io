@@ -19,12 +19,6 @@ const themes = {
     cornerTL: "border-success/35",
     cornerTR: "border-blue/30",
   },
-  travel: {
-    inset: "shadow-[inset_0_1px_0_hsl(var(--cyan)/0.08)]",
-    topLine: "from-transparent via-cyan/35 to-transparent",
-    cornerTL: "border-cyan/40",
-    cornerTR: "border-violet/35",
-  },
 } as const;
 
 export default function ListPageMasthead({ theme, marginBottomClass = "mb-12", children }: ListPageMasthead) {

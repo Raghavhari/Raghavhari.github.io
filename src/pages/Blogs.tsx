@@ -44,7 +44,7 @@ export default function Blogs() {
     return sorted;
   }, [selectedTags, sortBy]);
 
-  const featuredPosts = filteredAndSortedBlogs.filter((b) => b.featured).slice(0, 2);
+  const featuredPosts = filteredAndSortedBlogs.filter((b) => b.featured).slice(0, 1);
   const regularPosts = filteredAndSortedBlogs.filter((b) => !b.featured);
 
   return (

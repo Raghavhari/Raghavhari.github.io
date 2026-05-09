@@ -6,7 +6,6 @@ const nav = [
   { to: "/", displayPath: "~", caption: "portfolio · projects" },
   { to: "/blogs", displayPath: "/blogs", caption: "writing" },
   { to: "/oss", displayPath: "/oss", caption: "open source" },
-  { to: "/travel", displayPath: "/travel", caption: "field notes" },
 ] as const;
 
 export default function Header() {

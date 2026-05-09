@@ -4,9 +4,11 @@ import Technologies from "@/pages/Technologies";
 import Experience from "@/pages/Experience";
 import Projects from "@/pages/Projects";
 import Achievements from "@/pages/Achievements";
+import HomeSectionRail from "@/components/HomeSectionRail";
 
 const Index = () => (
   <>
+    <HomeSectionRail />
     <Hero />
     <About />
     <Technologies />

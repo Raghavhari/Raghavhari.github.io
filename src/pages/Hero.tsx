@@ -3,7 +3,7 @@ import { heroFocusLanes, heroHeadline, heroSnapshot } from "@/data/hero";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-border/30">
+    <section className="relative overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-[0.65]" aria-hidden />
       <div aria-hidden className="pointer-events-none absolute -top-24 left-1/2 h-[min(70vw,520px)] w-[min(140vw,900px)] -translate-x-1/2 rounded-full bg-gradient-radial blur-3xl" />
 
@@ -144,7 +144,7 @@ export default function Hero() {
                 >
                   <span className="flex items-center gap-2 uppercase tracking-[0.28em]">
                     <ArrowDownRight className="h-4 w-4 text-blue/80 transition-transform group-hover/cta:translate-x-0.5 group-hover/cta:translate-y-0.5" aria-hidden />
-                    descend_to_about
+                    open_chapter_01
                   </span>
                   <span className="hidden text-[10px] text-muted-foreground/70 sm:inline">#about</span>
                 </a>
@@ -153,6 +153,13 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      <div aria-hidden className="relative z-[1] -mt-px flex h-[clamp(2.5rem,7vw,4rem)] w-full justify-center overflow-hidden">
+        <svg className="h-full min-w-[120%] shrink-0 text-secondary/[0.22]" viewBox="0 0 1440 56" preserveAspectRatio="none">
+          <path fill="currentColor" d="M0,56 V18 C320,4 560,52 880,28 S1240,8 1440,14 V56z" />
+        </svg>
+      </div>
+      <div aria-hidden className="h-px w-full bg-gradient-to-r from-transparent via-border/50 to-transparent" />
     </section>
   );
 }

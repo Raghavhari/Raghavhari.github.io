@@ -19,122 +19,51 @@ export type Blog = {
 
 export const blogs: Blog[] = [
   {
-    slug: "exactly-once-is-a-lie",
-    title: "Exactly-Once Is a Lie (and What to Build Instead)",
+    slug: "django-production-checklist",
+    title: "Django in Production: The Checklist I Actually Use",
     preview:
-      "Why distributed systems people argue about exactly-once semantics — and the pragmatic patterns that actually work in production.",
+      "A pragmatic deployment checklist: settings, security headers, static files, Postgres, caching, and the gotchas that burn teams at launch.",
     content:
-      "Exactly-once delivery is a lie we tell ourselves. In this post, I explore the real tradeoffs of message processing guarantees and what patterns actually work in production systems.",
-    date: "Apr 12, 2026",
-    readTime: "8 min",
-    tags: ["Distributed Systems", "Backend"],
-    featured: true,
-    coverImage: {
-      src: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1600&q=85",
-      alt: "Abstract network cables and fiber connections",
-    },
-    gallery: [
-      {
-        src: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1400&q=85",
-        alt: "Earth from space with connectivity metaphor",
-        caption: "Delivery guarantees look different at planetary scale.",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=85",
-        alt: "Laptop with code in low light",
-        caption: "Idempotency keys beat wishful thinking.",
-      },
-    ],
-  },
-  {
-    slug: "postgres-locks",
-    title: "The Postgres Locks Cheatsheet I Wish I Had",
-    preview: "A field guide to lock modes, when ALTER TABLE freezes your prod, and how to deploy schema changes without fear.",
-    content:
-      "Understanding Postgres locks is critical for deploying schema changes without downtime. This comprehensive guide covers all lock modes and practical patterns.",
-    date: "Mar 03, 2026",
-    readTime: "12 min",
-    tags: ["PostgreSQL", "Database"],
-    featured: true,
-    coverImage: {
-      src: "https://images.unsplash.com/photo-1544383835-bda086bc2645?auto=format&fit=crop&w=1600&q=85",
-      alt: "Abstract database visualization in blue",
-    },
-    gallery: [
-      {
-        src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=85",
-        alt: "Analytics and charts on a laptop",
-        caption: "Lock waits show up first in your graphs — then in Slack.",
-      },
-    ],
-  },
-  {
-    slug: "rust-for-backend",
-    title: "Choosing Rust for Backend Services in 2026",
-    preview:
-      "A pragmatic look at where Rust earns its keep, where Go is still the right call, and the team-cost no one talks about.",
-    content:
-      "Rust is powerful but has tradeoffs. This post helps you decide when Rust makes sense for backend services and when Go might be the better choice.",
-    date: "Feb 18, 2026",
-    readTime: "10 min",
-    tags: ["Rust", "Backend"],
-    featured: false,
-    coverImage: {
-      src: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=85",
-      alt: "Laptop on a desk with code editor",
-    },
-  },
-  {
-    slug: "design-docs-that-ship",
-    title: "Design Docs That Actually Ship",
-    preview: "A template and checklist I've used to take 30+ projects from idea to production over five years.",
-    content:
-      "Good design docs are rare. I share the template and checklist I've used to take 30+ projects from idea to production.",
-    date: "Jan 22, 2026",
-    readTime: "6 min",
-    tags: ["Engineering", "Best Practices"],
-    featured: false,
-    coverImage: {
-      src: "https://images.unsplash.com/photo-1507925923038-cfccf5f60b70?auto=format&fit=crop&w=1200&q=85",
-      alt: "Notebook and pen on a wooden desk",
-    },
-  },
-  {
-    slug: "incident-review",
-    title: "How to Run an Incident Review People Don't Hate",
-    preview:
-      "Blameless retros, timeline reconstruction, and the one question that surfaces real systemic issues.",
-    content:
-      "Incident reviews done right lead to better systems. Learn how to run blameless retros that actually surface systemic issues.",
-    date: "Dec 09, 2025",
+      "A practical Django production checklist: DEBUG, ALLOWED_HOSTS, secrets, CSRF/SECURE_* settings, logging, static/media, database pooling, caching, and common deployment pitfalls.\n\nThis post is intentionally opinionated and optimized for real-world shipping: start secure, keep it observable, and make rollbacks easy.",
+    date: "May 02, 2026",
     readTime: "7 min",
-    tags: ["Operations", "Best Practices"],
-    featured: false,
+    tags: ["Django", "Python", "Backend"],
+    featured: true,
     coverImage: {
-      src: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=85",
-      alt: "Team collaborating around laptops in an office",
+      src: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1600&q=85",
+      alt: "Green terminal code representing backend work",
     },
-    gallery: [
-      {
-        src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=85",
-        alt: "Team discussion at a whiteboard",
-        caption: "The timeline wall beats a slide deck every time.",
-      },
-    ],
   },
   {
-    slug: "rate-limiting",
-    title: "Rate Limiting at the Edge: GCRA vs Token Bucket",
-    preview: "A deep dive into two algorithms, with benchmarks, code, and when you actually need either.",
+    slug: "java-spring-boot-structure",
+    title: "Java Backend Structure: Keeping Spring Boot Projects Clean",
+    preview:
+      "A simple folder/module structure, DTO boundaries, service layering, and the testing approach that keeps Java projects readable at scale.",
     content:
-      "Deep dive into rate limiting algorithms with benchmarks and production patterns for implementing at the edge.",
-    date: "Nov 28, 2025",
-    readTime: "9 min",
-    tags: ["Infrastructure", "Algorithms"],
+      "This post covers a pragmatic Spring Boot structure for real teams: packages by feature, controller/service/repository boundaries, DTO mapping, validation, error handling, and tests that don’t become a maintenance burden.\n\nThe goal is consistency and clarity: make the next change obvious.",
+    date: "Apr 10, 2026",
+    readTime: "6 min",
+    tags: ["Java", "Backend"],
     featured: false,
     coverImage: {
-      src: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1200&q=85",
-      alt: "Code on a computer screen",
+      src: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=85",
+      alt: "Code editor representing Java development",
+    },
+  },
+  {
+    slug: "javascript-performance-basics",
+    title: "JavaScript Performance Basics: Fixing the Slow Stuff First",
+    preview:
+      "The high-leverage wins: render less, ship less JS, memoize correctly, and measure with DevTools before guessing.",
+    content:
+      "A practical guide to front-end performance: reduce re-renders, avoid expensive work on the main thread, split bundles, tame third-party scripts, and validate improvements with real measurements.\n\nThe theme: make performance work boring and repeatable.",
+    date: "Mar 18, 2026",
+    readTime: "5 min",
+    tags: ["JavaScript", "Frontend"],
+    featured: false,
+    coverImage: {
+      src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=85",
+      alt: "Laptop with JavaScript development environment",
     },
   },
 ];

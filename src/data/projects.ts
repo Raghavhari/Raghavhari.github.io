@@ -1,4 +1,4 @@
-export type ProjectImage = {
+type ProjectImage = {
   src: string;
   alt: string;
   caption?: string;
@@ -117,10 +117,3 @@ export const CARD_ACCENTS = [
   },
 ];
 
-export function bentoSpan(i: number) {
-  if (i === 0) return "lg:col-span-8";
-  if (i === 1) return "lg:col-span-4";
-  if (i === 2) return "lg:col-span-4";
-  if (i === 3) return "lg:col-span-8";
-  return "lg:col-span-6";
-}

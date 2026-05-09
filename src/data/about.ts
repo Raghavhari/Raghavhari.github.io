@@ -4,11 +4,6 @@ export const aboutMeta = {
   tenure: "1+ yrs shipping production systems",
 } as const;
 
-export const aboutProfilePhoto = {
-  src: "/Harish.JPG",
-  alt: "Harish Raghav",
-} as const;
-
 export type AboutBeat = {
   id: string;
   title: string;

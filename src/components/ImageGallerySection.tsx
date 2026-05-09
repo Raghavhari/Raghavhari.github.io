@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { LazyImage } from "@/components/LazyImage";
 
-export type GalleryImageItem = {
+type GalleryImageItem = {
   src: string;
   alt: string;
   caption?: string;

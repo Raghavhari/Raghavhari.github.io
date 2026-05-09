@@ -6,7 +6,6 @@ const routes = [
   { to: "/", label: "~", caption: "Portfolio & projects" },
   { to: "/blogs", label: "/blogs", caption: "Essays & notes" },
   { to: "/oss", label: "/oss", caption: "Open source" },
-  { to: "/travel", label: "/travel", caption: "Field frames" },
 ] as const;
 
 const social = [

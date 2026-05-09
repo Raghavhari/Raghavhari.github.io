@@ -11,7 +11,6 @@ import NotFound from "./components/NotFound";
 import Blogs from "./pages/Blogs";
 import BlogDetail from "./components/BlogDetail";
 import OSS from "./pages/OSS";
-import Travel from "./pages/Travel";
 import ProjectDetail from "./components/ProjectDetail";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
@@ -55,7 +54,6 @@ const router = createBrowserRouter([
       { path: "blogs", element: <Blogs /> },
       { path: "blogs/:slug", element: <BlogDetail /> },
       { path: "oss", element: <OSS /> },
-      { path: "travel", element: <Travel /> },
       { path: "*", element: <NotFound /> },
     ],
   },
