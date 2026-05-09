@@ -25,9 +25,9 @@ export default function Technologies() {
         >
           <defs>
             <linearGradient id="tech-spine-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="hsl(217 91% 60% / 0.25)" />
-              <stop offset="50%" stopColor="hsl(262 83% 68% / 0.45)" />
-              <stop offset="100%" stopColor="hsl(189 94% 55% / 0.25)" />
+              <stop offset="0%" stopColor="hsl(var(--blue) / 0.22)" />
+              <stop offset="50%" stopColor="hsl(var(--violet) / 0.28)" />
+              <stop offset="100%" stopColor="hsl(var(--cyan) / 0.22)" />
             </linearGradient>
           </defs>
           <path d="M 24 28 L 876 28" fill="none" stroke="url(#tech-spine-grad)" strokeWidth="1.25" className="schematic-spine opacity-90" />

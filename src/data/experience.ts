@@ -34,22 +34,22 @@ export const experience: ExperienceEntry[] = [
 export const ENTRY_ACCENTS = [
   {
     rail: "from-blue via-blue/55 to-transparent",
-    bullet: "bg-blue shadow-[0_0_16px_hsl(217_91%_60%/0.55)]",
+    bullet: "bg-blue shadow-[0_0_16px_hsl(var(--blue)/0.26)]",
     tag: "text-blue border-blue/30 bg-blue/[0.06]",
   },
   {
     rail: "from-violet via-violet/55 to-transparent",
-    bullet: "bg-violet shadow-[0_0_16px_hsl(262_83%_68%/0.45)]",
+    bullet: "bg-violet shadow-[0_0_16px_hsl(var(--violet)/0.22)]",
     tag: "text-violet border-violet/30 bg-violet/[0.06]",
   },
   {
     rail: "from-cyan via-cyan/50 to-transparent",
-    bullet: "bg-cyan shadow-[0_0_14px_hsl(189_94%_55%/0.45)]",
+    bullet: "bg-cyan shadow-[0_0_14px_hsl(var(--cyan)/0.20)]",
     tag: "text-cyan border-cyan/25 bg-cyan/[0.05]",
   },
   {
     rail: "from-success via-success/45 to-transparent",
-    bullet: "bg-success shadow-[0_0_14px_hsl(158_64%_52%/0.45)]",
+    bullet: "bg-success shadow-[0_0_14px_hsl(var(--success)/0.20)]",
     tag: "text-success border-success/25 bg-success/[0.05]",
   },
 ];

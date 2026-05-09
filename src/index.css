@@ -23,28 +23,24 @@
     --accent: 0 0% 85%;
     --accent-foreground: 0 0% 0%;
 
-    --blue: 217 91% 60%;
-
-    --violet: 262 83% 68%;
-
-    --cyan: 189 94% 55%;
-
-    --success: 158 64% 52%;
-
-    --amber: 38 92% 60%;
+    --blue: 0 0% 92%;
+    --violet: 0 0% 82%;
+    --cyan: 0 0% 72%;
+    --success: 0 0% 66%;
+    --amber: 0 0% 86%;
 
     --border: 0 0% 13%;
-    --ring: 217 91% 60%;
+    --ring: 0 0% 86%;
 
     --radius: 0.85rem;
 
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 65%), hsl(262 83% 68%));
-    --gradient-soft: linear-gradient(135deg, hsl(217 91% 60% / 0.12), hsl(262 83% 68% / 0.06));
-    --gradient-radial: radial-gradient(ellipse at top, hsl(217 91% 60% / 0.10), transparent 60%);
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 98%), hsl(0 0% 68%));
+    --gradient-soft: linear-gradient(135deg, hsl(0 0% 100% / 0.12), hsl(0 0% 100% / 0.04));
+    --gradient-radial: radial-gradient(ellipse at top, hsl(0 0% 100% / 0.09), transparent 60%);
     --gradient-text: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 58%));
 
-    --glow-primary: 0 0 40px hsl(217 91% 60% / 0.25);
-    --shadow-elegant: 0 20px 60px -20px hsl(217 91% 60% / 0.20);
+    --glow-primary: 0 0 44px hsl(0 0% 100% / 0.12);
+    --shadow-elegant: 0 22px 64px -22px hsl(0 0% 100% / 0.08);
 
     --glass-bg: hsl(0 0% 6% / 0.65);
     --glass-border: hsl(0 0% 100% / 0.07);
@@ -129,18 +125,18 @@
 
   .grid-bg {
     background-image:
-      linear-gradient(hsl(217 91% 60% / 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(217 91% 60% / 0.03) 1px, transparent 1px);
+      linear-gradient(hsl(0 0% 100% / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(0 0% 100% / 0.03) 1px, transparent 1px);
     background-size: 56px 56px;
     mask-image: radial-gradient(ellipse 60% 60% at 50% 40%, black, transparent 80%);
   }
 
   .dot-live {
-    box-shadow: 0 0 8px hsl(158 64% 52% / 0.70);
+    box-shadow: 0 0 10px hsl(0 0% 100% / 0.28);
   }
 
   .signature-glow {
-    filter: drop-shadow(0 0 24px hsl(217 91% 60% / 0.20));
+    filter: drop-shadow(0 0 26px hsl(0 0% 100% / 0.12));
   }
 
   .anim-both {

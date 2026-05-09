@@ -58,7 +58,7 @@ export default function Blogs() {
             Notes from the trenches.
           </h1>
           <p className="mt-4 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Things I&apos;ve learned shipping software — backend, infra, and the human side of engineering. Filter by tag or
+            Things I&apos;ve learned shipping software! backend, infra, and the human side of engineering. Filter by tag or
             sort the feed; featured essays stay pinned up top.
           </p>
           <p className="mt-6 font-mono text-[11px] text-muted-foreground">

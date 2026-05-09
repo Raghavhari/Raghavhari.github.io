@@ -50,13 +50,13 @@ export default function About() {
                 {aboutBeats.map((beat, i) => (
                   <li key={beat.id} className="relative pl-12 sm:pl-14">
                     <div className="absolute left-0 top-2 flex flex-col items-center sm:left-1 sm:top-2.5">
-                      <span className={`relative z-[1] flex h-9 w-9 items-center justify-center rounded-full border-2 border-background bg-background-elevated font-mono text-[11px] font-medium tabular-nums text-foreground shadow-[0_0_0_1px_hsl(var(--border)),0_8px_24px_-8px_hsl(217_91%_60%/0.35)] sm:h-10 sm:w-10 sm:text-xs`}>
+                      <span className={`relative z-[1] flex h-9 w-9 items-center justify-center rounded-full border-2 border-background bg-background-elevated font-mono text-[11px] font-medium tabular-nums text-foreground shadow-[0_0_0_1px_hsl(var(--border)),0_8px_24px_-8px_hsl(var(--blue)/0.20)] sm:h-10 sm:w-10 sm:text-xs`}>
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <span aria-hidden className={`absolute left-1/2 top-[calc(100%+0.25rem)] h-8 w-8 -translate-x-1/2 rounded-full bg-gradient-to-b ${BEAT_ACCENTS[i]} opacity-[0.12] blur-lg ${i === aboutBeats.length - 1 ? "hidden" : ""}`} />
                     </div>
 
-                    <article className={`group relative overflow-hidden rounded-2xl border border-border/50 bg-background-elevated/25 p-6 transition duration-300 hover:border-blue/35 hover:shadow-[0_0_0_1px_hsl(var(--blue)/0.1),0_24px_48px_-28px_hsl(217_91%_60%/0.12)] sm:p-7 md:p-8`}>
+                    <article className={`group relative overflow-hidden rounded-2xl border border-border/50 bg-background-elevated/25 p-6 transition duration-300 hover:border-blue/35 hover:shadow-[0_0_0_1px_hsl(var(--blue)/0.1),0_24px_48px_-28px_hsl(var(--blue)/0.10)] sm:p-7 md:p-8`}>
                       <div className={`absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b ${BEAT_ACCENTS[i]} opacity-90`} aria-hidden />
 
                       <h3 className="font-display text-lg font-semibold tracking-tight text-foreground sm:text-xl md:text-[1.35rem]">

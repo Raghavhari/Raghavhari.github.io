@@ -19,12 +19,10 @@ export type Blog = {
 
 export const blogs: Blog[] = [
   {
-    slug: "django-production-checklist",
-    title: "Django in Production: The Checklist I Actually Use",
-    preview:
-      "A pragmatic deployment checklist: settings, security headers, static files, Postgres, caching, and the gotchas that burn teams at launch.",
-    content:
-      "A practical Django production checklist: DEBUG, ALLOWED_HOSTS, secrets, CSRF/SECURE_* settings, logging, static/media, database pooling, caching, and common deployment pitfalls.\n\nThis post is intentionally opinionated and optimized for real-world shipping: start secure, keep it observable, and make rollbacks easy.",
+    slug: "django-startup",
+    title: "Behind the Scenes of Django: From Startup to Serving Your First Request",
+    preview: "Ever wondered what actually happens when you run python manage.py runserver and open a Django page for the first time?",
+    content: "A practical Django production checklist: DEBUG, ALLOWED_HOSTS, secrets, CSRF/SECURE_* settings, logging, static/media, database pooling, caching, and common deployment pitfalls.\n\nThis post is intentionally opinionated and optimized for real-world shipping: start secure, keep it observable, and make rollbacks easy.",
     date: "May 02, 2026",
     readTime: "7 min",
     tags: ["Django", "Python", "Backend"],

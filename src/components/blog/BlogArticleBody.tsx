@@ -28,7 +28,7 @@ export default function BlogArticleBody({ blog }: { blog: Blog }) {
               ))}
             </ul>
             <p className="max-w-[12rem] text-xs leading-relaxed text-muted-foreground/80">
-              Scroll the column for the full draft — figures sit below when present.
+              Scroll the column for the full draft! figures sit below when present.
             </p>
           </div>
         </aside>

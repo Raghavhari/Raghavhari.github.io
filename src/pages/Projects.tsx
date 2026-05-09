@@ -11,7 +11,7 @@ export default function Projects() {
       code="PRJ · SHIP LOG"
       eyebrow="Selected work"
       title="Projects I'm proud of."
-      description="Builds I'd defend in a design review — each one a bet on clarity, throughput, or developer experience."
+      description="Builds I'd defend in a design review, each one a bet on clarity, throughput, or developer experience."
       accent="blue"
       reverse
       bleed={false}
@@ -41,7 +41,7 @@ export default function Projects() {
                   <Link
                     key={p.slug}
                     to={`/projects/${p.slug}`}
-                    className="group relative flex min-h-0 flex-col overflow-hidden rounded-2xl border border-border/50 bg-background-elevated/30 transition duration-300 hover:border-blue/40 hover:shadow-[0_0_0_1px_hsl(var(--blue)/0.1),0_20px_50px_-24px_hsl(217_91%_60%/0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background motion-safe:animate-fade-in-up anim-both lg:col-span-4 lg:min-h-[15rem]"
+                    className="group relative flex min-h-0 flex-col overflow-hidden rounded-2xl border border-border/50 bg-background-elevated/30 transition duration-300 hover:border-blue/40 hover:shadow-[0_0_0_1px_hsl(var(--blue)/0.1),0_20px_50px_-24px_hsl(var(--blue)/0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background motion-safe:animate-fade-in-up anim-both lg:col-span-4 lg:min-h-[15rem]"
                     style={{ animationDelay: `${i * 75}ms` }}
                   >
                     <div aria-hidden className={`absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b ${accent.rail}`} />

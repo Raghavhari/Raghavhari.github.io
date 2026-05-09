@@ -11,7 +11,7 @@ export default function Achievements() {
       code="ACH · PROOF"
       eyebrow="Achievements"
       title="Proof on the wall."
-      description="Milestones, recognition, and outcomes — the stuff that doesn't fit neatly into a commit graph."
+      description="Milestones, recognition, and outcomes! the stuff that doesn't fit neatly into a commit graph."
       accent="violet"
       reverse={false}
       bleed
@@ -47,7 +47,7 @@ export default function Achievements() {
               return (
                 <article
                   key={item.id}
-                  className={`group relative flex flex-col overflow-hidden rounded-2xl border border-border/50 bg-background-elevated/25 shadow-[0_12px_40px_-28px_rgba(0,0,0,0.65)] transition duration-300 hover:border-violet/35 hover:shadow-[0_20px_50px_-28px_hsl(262_83%_68%/0.2)] motion-safe:animate-fade-in-up anim-both motion-reduce:rotate-0 ${tilt} lg:col-span-4 lg:min-h-[18.5rem]`}
+                  className={`group relative flex flex-col overflow-hidden rounded-2xl border border-border/50 bg-background-elevated/25 shadow-[0_12px_40px_-28px_rgba(0,0,0,0.65)] transition duration-300 hover:border-violet/35 hover:shadow-[0_20px_50px_-28px_hsl(var(--violet)/0.12)] motion-safe:animate-fade-in-up anim-both motion-reduce:rotate-0 ${tilt} lg:col-span-4 lg:min-h-[18.5rem]`}
                   style={{ animationDelay: `${120 + i * 90}ms` }}
                 >
                   <div aria-hidden className={`pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br ${tone.wash} to-transparent opacity-70`} />

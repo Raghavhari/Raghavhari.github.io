@@ -58,7 +58,10 @@ export default function PageLoader() {
       <span className="sr-only">Loading portfolio…</span>
 
       <div className="pointer-events-none absolute inset-0 grid-bg opacity-[0.55]" />
-      <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_42%,hsl(217_91%_60%/0.09),transparent_72%)]" />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_42%,hsl(var(--blue)/0.10),transparent_72%)]"
+      />
 
       <div className="pointer-events-none absolute inset-x-6 top-8 flex justify-between sm:inset-x-10">
         <span className="h-6 w-6 border-l-2 border-t-2 border-blue/40" />
@@ -78,7 +81,7 @@ export default function PageLoader() {
           <div aria-hidden className="loader-ring-slow absolute inset-0 rounded-2xl border border-dashed border-blue/25 motion-reduce:opacity-40" />
           <div aria-hidden className="loader-ring-slow-reverse absolute inset-3 rounded-xl border border-violet/20 motion-reduce:opacity-35" />
           <div aria-hidden className="absolute inset-0 rounded-2xl bg-gradient-primary opacity-[0.15] blur-2xl" />
-          <span className="relative flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-primary font-display text-xl font-bold text-white shadow-glow-primary ring-2 ring-background sm:h-16 sm:w-16 sm:text-2xl">
+          <span className="relative flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-primary font-display text-xl font-bold text-black shadow-glow-primary ring-2 ring-background sm:h-16 sm:w-16 sm:text-2xl">
             H
           </span>
         </div>

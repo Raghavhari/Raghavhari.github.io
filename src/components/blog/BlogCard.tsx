@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 function blogLogoFromTags(tags: string[]) {
   const t = new Set(tags.map((tag) => tag.toLowerCase()));
-  if (t.has("django")) return { label: "DJANGO", accent: "emerald" as const };
-  if (t.has("java")) return { label: "JAVA", accent: "orange" as const };
-  if (t.has("javascript")) return { label: "JAVASCRIPT", accent: "yellow" as const };
+  if (t.has("django")) return { label: "DJANGO", accent: "success" as const };
+  if (t.has("java")) return { label: "JAVA", accent: "amber" as const };
+  if (t.has("javascript")) return { label: "JAVASCRIPT", accent: "cyan" as const };
   return { label: "BLOG", accent: "blue" as const };
 }
 
@@ -40,13 +40,13 @@ export default function BlogCard({ slug, title, preview, date, readTime, tags, f
       >
         <div className="absolute inset-0 grid-bg opacity-25" />
         <div
-          className={`absolute inset-0 ${logo.accent === "emerald"
-              ? "[background:radial-gradient(ellipse_65%_60%_at_30%_35%,hsl(142_70%_45%/0.22),transparent_60%)]"
-              : logo.accent === "orange"
-                ? "[background:radial-gradient(ellipse_65%_60%_at_30%_35%,hsl(24_95%_55%/0.22),transparent_60%)]"
-                : logo.accent === "yellow"
-                  ? "[background:radial-gradient(ellipse_65%_60%_at_30%_35%,hsl(48_95%_55%/0.22),transparent_60%)]"
-                  : "[background:radial-gradient(ellipse_65%_60%_at_30%_35%,hsl(var(--blue)/0.18),transparent_60%)]"
+          className={`absolute inset-0 ${logo.accent === "success"
+              ? "[background:radial-gradient(ellipse_65%_60%_at_30%_35%,hsl(var(--success)/0.16),transparent_60%)]"
+              : logo.accent === "amber"
+                ? "[background:radial-gradient(ellipse_65%_60%_at_30%_35%,hsl(var(--amber)/0.16),transparent_60%)]"
+                : logo.accent === "cyan"
+                  ? "[background:radial-gradient(ellipse_65%_60%_at_30%_35%,hsl(var(--cyan)/0.14),transparent_60%)]"
+                  : "[background:radial-gradient(ellipse_65%_60%_at_30%_35%,hsl(var(--blue)/0.14),transparent_60%)]"
             }`}
         />
         <div className="absolute inset-0 [background:radial-gradient(ellipse_55%_50%_at_80%_35%,hsl(var(--violet)/0.18),transparent_62%)]" />
@@ -58,14 +58,7 @@ export default function BlogCard({ slug, title, preview, date, readTime, tags, f
             className={`select-none text-center font-display font-semibold uppercase tracking-[0.35em] text-transparent opacity-90 [background-size:220%_220%] [background-position:0%_50%] motion-safe:animate-[gradient_6s_ease_infinite] ${featured
                 ? "text-[clamp(1.4rem,3.2vw,2.4rem)]"
                 : "text-[clamp(1.05rem,2.6vw,1.6rem)]"
-              } ${logo.accent === "emerald"
-                ? "bg-gradient-to-r from-emerald-200 via-emerald-50 to-violet-200 bg-clip-text"
-                : logo.accent === "orange"
-                  ? "bg-gradient-to-r from-orange-200 via-orange-50 to-violet-200 bg-clip-text"
-                  : logo.accent === "yellow"
-                    ? "bg-gradient-to-r from-yellow-200 via-yellow-50 to-violet-200 bg-clip-text"
-                    : "bg-gradient-to-r from-blue-200 via-blue-50 to-violet-200 bg-clip-text"
-              }`}
+              } bg-gradient-to-r from-foreground via-foreground/70 to-muted-foreground bg-clip-text`}
           >
             {logo.label}
           </span>

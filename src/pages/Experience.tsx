@@ -11,7 +11,7 @@ export default function Experience() {
       code="EXP · LEDGER"
       eyebrow="Experience"
       title="Where I've shipped."
-      description="A chronological ledger — titles, orgs, and outcomes I'm willing to put under scrutiny."
+      description="A chronological ledger! titles, orgs, and outcomes I'm willing to put under scrutiny."
       accent="cyan"
       reverse={false}
       bleed
@@ -40,7 +40,7 @@ export default function Experience() {
 
             return (
               <li key={`${item.company}-${item.duration}`}>
-                <article className="group relative overflow-hidden rounded-2xl border border-border/50 bg-background-elevated/30 transition duration-300 hover:border-cyan/35 hover:shadow-[0_0_0_1px_hsl(var(--cyan)/0.1),0_28px_56px_-32px_hsl(189_94%_55%/0.14)]">
+                <article className="group relative overflow-hidden rounded-2xl border border-border/50 bg-background-elevated/30 transition duration-300 hover:border-cyan/35 hover:shadow-[0_0_0_1px_hsl(var(--cyan)/0.1),0_28px_56px_-32px_hsl(var(--cyan)/0.10)]">
                   <div aria-hidden className={`absolute left-0 top-0 h-full w-[4px] bg-gradient-to-b ${accent.rail}`} />
                   <span aria-hidden className="pointer-events-none absolute right-3 top-2 select-none font-display text-[clamp(2.75rem,9vw,4.75rem)] font-bold leading-none tracking-tighter text-foreground/[0.04] transition-opacity duration-300 group-hover:text-foreground/[0.08]">
                     {ordinal}

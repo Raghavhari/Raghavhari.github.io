@@ -13,7 +13,7 @@ export const techGroups: TechGroup[] = [
   {
     label: "Infra",
     blurb: "Where it runs",
-    items: ["Docker", "AWS", "Microsoft Azure", "GCP", "Azure Devops"],
+    items: ["Docker", "AWS", "Azure", "GCP", "Azure Devops"],
   },
   {
     label: "Data",
@@ -28,35 +28,35 @@ export const techGroups: TechGroup[] = [
 ];
 
 export const SPINE_TAPS = [
-  "hsl(217 91% 60% / 0.45)",
-  "hsl(262 83% 68% / 0.45)",
-  "hsl(189 94% 55% / 0.45)",
-  "hsl(158 64% 52% / 0.45)",
+  "hsl(var(--blue) / 0.45)",
+  "hsl(var(--violet) / 0.45)",
+  "hsl(var(--cyan) / 0.45)",
+  "hsl(var(--success) / 0.45)",
 ];
 
 export const LANE_ACCENTS = [
   {
     rail: "from-blue to-transparent",
     hoverText: "group-hover/item:text-blue",
-    node: "bg-blue shadow-[0_0_12px_hsl(217_91%_60%/0.35)]",
+    node: "bg-blue shadow-[0_0_12px_hsl(var(--blue)/0.28)]",
     index: "text-blue",
   },
   {
     rail: "from-violet to-transparent",
     hoverText: "group-hover/item:text-violet",
-    node: "bg-violet shadow-[0_0_12px_hsl(262_83%_68%/0.35)]",
+    node: "bg-violet shadow-[0_0_12px_hsl(var(--violet)/0.24)]",
     index: "text-violet",
   },
   {
     rail: "from-cyan to-transparent",
     hoverText: "group-hover/item:text-cyan",
-    node: "bg-cyan shadow-[0_0_12px_hsl(189_94%_55%/0.35)]",
+    node: "bg-cyan shadow-[0_0_12px_hsl(var(--cyan)/0.22)]",
     index: "text-cyan",
   },
   {
     rail: "from-success to-transparent",
     hoverText: "group-hover/item:text-success",
-    node: "bg-success shadow-[0_0_12px_hsl(158_64%_52%/0.35)]",
+    node: "bg-success shadow-[0_0_12px_hsl(var(--success)/0.22)]",
     index: "text-success",
   },
 ];
