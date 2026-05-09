@@ -4,6 +4,11 @@ export type BlogImage = {
   caption?: string;
 };
 
+export type ContentBlock = 
+  | { type: "text"; text: string }
+  | { type: "image"; image: BlogImage }
+  | { type: "code"; code: string; language?: string };
+
 export type Blog = {
   slug: string;
   title: string;
@@ -14,7 +19,7 @@ export type Blog = {
   tags: string[];
   featured: boolean;
   coverImage?: BlogImage;
-  gallery?: BlogImage[];
+  contentBlocks?: ContentBlock[];
 };
 
 export const blogs: Blog[] = [

@@ -6,7 +6,6 @@ import BlogDetailNotFound from "@/components/blog/BlogDetailNotFound";
 import BlogEditorialHeader from "@/components/blog/BlogEditorialHeader";
 import BlogArticleHero from "@/components/blog/BlogArticleHero";
 import BlogArticleBody from "@/components/blog/BlogArticleBody";
-import BlogArticleFigures from "@/components/blog/BlogArticleFigures";
 import BlogSeriesNav from "@/components/blog/BlogSeriesNav";
 import { layout } from "@/lib/styles";
 
@@ -27,8 +26,6 @@ export default function BlogDetail() {
     return <BlogDetailNotFound />;
   }
 
-  const gallery = blog.gallery ?? [];
-
   return (
     <article className={layout.page}>
       <PageAmbient variant="blog" />
@@ -37,7 +34,6 @@ export default function BlogDetail() {
         <BlogEditorialHeader blog={blog} />
         <BlogArticleHero blog={blog} />
         <BlogArticleBody blog={blog} />
-        <BlogArticleFigures images={gallery} />
         <BlogSeriesNav prev={prev} next={next} />
       </div>
     </article>

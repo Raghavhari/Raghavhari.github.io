@@ -1,9 +1,16 @@
-import type { Blog } from "@/data/blog";
+import type { Blog, ContentBlock } from "@/data/blog";
+import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import vscDarkPlus from 'react-syntax-highlighter/dist/esm/styles/prism/vsc-dark-plus';
 
 export default function BlogArticleBody({ blog }: { blog: Blog }) {
+  const blocks: (ContentBlock | { type: "text"; text: string })[] =
+    blog.contentBlocks && blog.contentBlocks.length > 0
+      ? blog.contentBlocks
+      : [{ type: "text" as const, text: blog.content }];
+
   return (
     <div className="mt-14 lg:mt-16">
-      <div className="mx-auto max-w-3xl lg:mx-0 lg:max-w-none lg:grid lg:grid-cols-[minmax(0,42rem)_1fr] lg:gap-12 xl:gap-16">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <div>
           <div className="rounded-xl border border-violet/15 bg-violet/[0.04] p-6 sm:p-8">
             <p className="text-pretty font-display text-lg font-medium leading-snug text-foreground/95 sm:text-xl">
@@ -13,25 +20,59 @@ export default function BlogArticleBody({ blog }: { blog: Blog }) {
 
           <div className="relative mt-10 pl-5 sm:pl-7">
             <div className="absolute left-0 top-1 bottom-1 w-px bg-gradient-to-b from-violet/50 via-blue/30 to-transparent" aria-hidden />
-            <div className="whitespace-pre-wrap text-base leading-[1.8] text-foreground/88 sm:text-lg">{blog.content}</div>
+            <div className="text-base leading-[1.8] text-foreground/88 sm:text-lg">
+              {blocks.map((block, idx) => {
+                if (block.type === "image") {
+                  const { src, alt, caption } = block.image;
+                  return (
+                    <figure key={`${blog.slug}-img-${idx}`} className="my-8 mx-auto max-w-2xl">
+                      <div className="overflow-hidden rounded-xl border border-border/50 bg-muted/20">
+                        <img
+                          src={src}
+                          alt={alt}
+                          loading="lazy"
+                          className="h-auto w-full object-cover"
+                        />
+                      </div>
+                      {caption ? (
+                        <figcaption className="mt-3 text-sm leading-relaxed text-muted-foreground">{caption}</figcaption>
+                      ) : null}
+                    </figure>
+                  );
+                }
+
+                if (block.type === "code") {
+                  return (
+                    <div key={`${blog.slug}-code-${idx}`} className="my-8 mx-auto max-w-4xl overflow-hidden rounded-xl border border-border/50 shadow-sm text-sm sm:text-base">
+                      <SyntaxHighlighter
+                        language={block.language || "javascript"}
+                        style={vscDarkPlus}
+                        customStyle={{
+                          margin: 0,
+                          padding: "1.25rem",
+                          borderRadius: "0.75rem",
+                          backgroundColor: "#1e1e1e",
+                        }}
+                      >
+                        {block.code}
+                      </SyntaxHighlighter>
+                    </div>
+                  );
+                }
+
+                if (block.type === "text") {
+                  return (
+                    <div key={`${blog.slug}-txt-${idx}`} className="whitespace-pre-wrap my-6 first:mt-0 last:mb-0">
+                      {block.text}
+                    </div>
+                  );
+                }
+
+                return null;
+              })}
+            </div>
           </div>
         </div>
-
-        <aside className="mt-12 hidden lg:mt-0 lg:block">
-          <div className="sticky top-28 space-y-6">
-            <p className="font-mono text-[9px] uppercase tracking-[0.35em] text-muted-foreground">In this piece</p>
-            <ul className="space-y-3 border-l border-border/40 pl-4 font-mono text-[11px] text-muted-foreground">
-              {blog.tags.slice(0, 4).map((tag) => (
-                <li key={tag} className="leading-snug">
-                  {tag}
-                </li>
-              ))}
-            </ul>
-            <p className="max-w-[12rem] text-xs leading-relaxed text-muted-foreground/80">
-              Scroll the column for the full draft! figures sit below when present.
-            </p>
-          </div>
-        </aside>
       </div>
     </div>
   );

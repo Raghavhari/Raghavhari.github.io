@@ -51,7 +51,7 @@ export const projects: Project[] = [
   },
   {
     slug: "affilazo",
-    name: "Affilazo - Affiliate Marketing",
+    name: "Affilazo",
     short: "A simple affiliate marketing tracking app in Shopify.",
     tags: ["TypeScript", "Remix"],
     status: "Not Live",
