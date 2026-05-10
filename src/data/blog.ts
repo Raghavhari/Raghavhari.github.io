@@ -518,7 +518,7 @@ export const blogs: Blog[] = [
       },
       {
         type: "text",
-        text: "Once the control is returned tosquare2, the Execution Context for that function invocation is deleted."
+        text: "Once the control is returned to square2, the Execution Context for that function invocation is deleted."
       },
       {
         type: "code",
