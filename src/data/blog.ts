@@ -1,10 +1,10 @@
-export type BlogImage = {
+type BlogImage = {
   src: string;
   alt: string;
   caption?: string;
 };
 
-export type ContentBlock =
+type ContentBlock =
   | { type: "text"; text: string }
   | { type: "image"; image: BlogImage }
   | { type: "code"; code: string; language?: string };
