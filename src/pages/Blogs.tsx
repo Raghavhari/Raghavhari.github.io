@@ -82,8 +82,8 @@ export default function Blogs() {
                     type="button"
                     onClick={() => setSortBy(option)}
                     className={`rounded-lg border px-3 py-2 font-mono text-[11px] uppercase tracking-wider transition-all duration-300 ${sortBy === option
-                        ? "border-blue/40 bg-blue/[0.08] text-blue"
-                        : "border-border/45 text-muted-foreground hover:border-border hover:text-foreground"
+                      ? "border-blue/40 bg-blue/[0.08] text-blue"
+                      : "border-border/45 text-muted-foreground hover:border-border hover:text-foreground"
                       }`}
                   >
                     {option === "readTime" ? "Read time" : option.charAt(0).toUpperCase() + option.slice(1)}
@@ -103,8 +103,8 @@ export default function Blogs() {
                       setSelectedTags((prev) => (prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]))
                     }
                     className={`group flex items-center gap-1.5 rounded-lg border px-3 py-2 font-mono text-[11px] transition-all duration-300 ${selectedTags.includes(tag)
-                        ? "border-violet/40 bg-violet/[0.08] text-violet"
-                        : "border-border/45 text-muted-foreground hover:border-border hover:text-foreground"
+                      ? "border-violet/40 bg-violet/[0.08] text-violet"
+                      : "border-border/45 text-muted-foreground hover:border-border hover:text-foreground"
                       }`}
                   >
                     {tag}
