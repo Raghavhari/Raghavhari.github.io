@@ -1,1 +1,0 @@
-import{j as t}from"./index-BanbQVsL.js";function r({src:a,alt:e,imgClassName:o="",onError:s}){return t.jsx("img",{src:a,alt:e,loading:"lazy",onError:s,className:`absolute inset-0 h-full w-full object-cover ${o}`})}export{r as L};
