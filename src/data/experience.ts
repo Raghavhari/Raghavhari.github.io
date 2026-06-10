@@ -15,7 +15,7 @@ export const experience: ExperienceEntry[] = [
       "Centralized message catalogs and airport-specific dynamic JSON configurations using multi-tenant functions and Django custom commands, reducing airport configuration effort by 60% and enabling faster feature rollouts.",
       "Optimized AeroSimple’s Safety Management workflows by improving hazard identification and safety risk assessment monitoring, resulting in a 45% improvement in operational efficiency.",
       "Led end-to-end development of the Shopify Referral App, architecting 5+ interactive React.js screens for onboarding affiliates and monitoring affiliate performance.",
-      "Optimized affiliate API request-response latency by 70% over 1M+ records through PostgreSQL indexing and high-throughput API design.",
+      "Optimized affiliate API request-response latency by 70% over 3k+ records through PostgreSQL indexing and high-throughput API design.",
       "Built modular, performance-optimized REST APIs and frontend components using memoization, lazy loading, and code splitting, ensuring a scalable and maintainable full-stack architecture."
     ],
   },
