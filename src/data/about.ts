@@ -14,7 +14,7 @@ export const aboutBeats: AboutBeat[] = [
   {
     id: "yectra",
     title: "Impact at Yectra",
-    body: "At Yectra, I've driven 5% in annual revenue through leading and developing innovative cloud-native products, and have also been recognized as the best Scrum Master for managing teams and improving overall productivity.",
+    body: "At Yectra, I've driven a 5% increase in annual revenue by leading the development of cloud-native products by leveraging Agile Scrum practices to enhance team productivity and delivery efficiency.",
   },
   {
     id: "trainee",

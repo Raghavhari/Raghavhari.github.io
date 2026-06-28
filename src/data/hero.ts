@@ -7,12 +7,12 @@ export const heroFocusLanes = ["Full-stack", "Distributed systems", "Databases"]
 
 export const heroSnapshot = {
   roleTitle: "Role",
-  roleValue: "Staff backend",
+  roleValue: "Full Stack",
   eventsLabel: "Events",
   eventsPrimary: "NATS",
   eventsSecondary: "pub/sub",
   latencyLabel: "Latency budget",
   latencyValue: "p99-conscious",
   langsLabel: "Languages",
-  langs: ["Python", "Go"] as const,
+  langs: ["JavaScript", "Python"] as const,
 } as const;

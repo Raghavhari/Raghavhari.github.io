@@ -8,7 +8,7 @@ export const techGroups: TechGroup[] = [
   {
     label: "Backend",
     blurb: "Execution & boundaries",
-    items: ["Python", "Django", "Fast API", "Go", "GraphQL"],
+    items: ["Python", "Django", "Fast API", "Express.js", "GraphQL"],
   },
   {
     label: "Infra",
@@ -18,7 +18,7 @@ export const techGroups: TechGroup[] = [
   {
     label: "Data",
     blurb: "Persistence & motion",
-    items: ["Postgres", "Mongo DB", "Redis"],
+    items: ["Postgres", "Mongo DB", "AWS S3"],
   },
   {
     label: "Tools",

@@ -11,12 +11,11 @@ export const experience: ExperienceEntry[] = [
     company: "Yectra Technologies",
     duration: "2024 — Present",
     impact: [
-      "Subject Matter Expert for Aerosimple’s Snow Management Module, a globally used solution that improved airport winter operations efficiency by 30%.",
-      "Centralized message catalogs and airport-specific dynamic JSON configurations using multi-tenant functions and Django custom commands, reducing airport configuration effort by 60% and enabling faster feature rollouts.",
-      "Optimized AeroSimple’s Safety Management workflows by improving hazard identification and safety risk assessment monitoring, resulting in a 45% improvement in operational efficiency.",
-      "Led end-to-end development of the Shopify Referral App, architecting 5+ interactive React.js screens for onboarding affiliates and monitoring affiliate performance.",
-      "Optimized affiliate API request-response latency by 70% over 3k+ records through PostgreSQL indexing and high-throughput API design.",
-      "Built modular, performance-optimized REST APIs and frontend components using memoization, lazy loading, and code splitting, ensuring a scalable and maintainable full-stack architecture."
+      "Co-led development of Aerosimple’s Snow Management Module, the system used to plan and prioritize airport winter operations, becoming the team’s go-to Subject Matter Expert and driving a 30% improvement in winter-ops efficiency across deployed airports.",
+      "Designed and built a centralized configuration framework for message catalogs and airport-specific JSON configs, replacing per-airport manual setup, reducing new-airport configuration effort by 60%, and shortening the path to ship new features to all airports at once.",
+      "Extended the Safety Management Module with hazard identification and safety risk assessment workflows, digitizing a previously manual process and improving safety-review efficiency by 45%.",
+      "Owned end-to-end delivery of the Shopify Referral App, architecting 5+ interactive React.js screens covering affiliate onboarding, referral tracking, and performance monitoring, taking it from concept to production.",
+      "Triaged and resolved production incidents on the Aerosimple platform through root-cause debugging, cutting recurring issues by documenting fixes as reusable runbooks, and working directly with airport ops teams to validate resolutions.",
     ],
   },
   {
@@ -24,9 +23,10 @@ export const experience: ExperienceEntry[] = [
     company: "Yectra Technologies",
     duration: "2024",
     impact: [
-      "Designed and owned the end-to-end architecture of a software marketplace for enterprise and public API development, reducing API development time by 40%.",
-      "Developed public APIs and exposed them via OpenAPI specifications, enabling third-party integrations and contributing to a 10% expansion of the platform ecosystem.",
-      "Implemented end-to-end automated CI/CD deployment to Azure, reducing manual deployment effort by 65% and contributing to a 5% surge in revenue.",
+      "Designed and owned the end-to-end architecture of a marketplace platform enabling enterprise and public developers to both discover and build APIs, reducing API development time by 40%.",
+      "Developed public APIs and exposed them via OpenAPI specifications, enabling third-party integrations and driving a 10% increase in public API consumers.",
+      "Implemented end-to-end automated CI/CD deployment to Azure, reducing manual deployment effort by 65% and shortening release cycle time, enabling faster feature delivery.",
+      "Led Agile Scrum ceremonies and ensured the timely delivery of sprint commitments across cross-functional teams.",
     ],
   },
 ];
